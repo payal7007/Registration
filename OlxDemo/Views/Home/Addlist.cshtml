@@ -1,0 +1,74 @@
+﻿@model IEnumerable<OlxDemo.Models.AddlistModel>
+
+@{
+    ViewBag.Title = "Addlist";
+}
+
+<h2>Addlist</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>InsertUserDetails</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm("Addlist", "Home", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>Product Id:</td>
+                <td>@Html.TextBoxFor(u => u.productDetailsId)</td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>@Html.TextBoxFor(u => u.Education)</td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td>@Html.TextBoxFor(u => u.Location)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="submit" value="Register" /> </td>
+            </tr>
+        </table>
+    }
+    <h4>User Details</h4>
+    @if (Model != null)
+    {
+        if (Model.usersinfo.Count > 0)
+        {
+            <table>
+                <tr>
+                    <th>UserId</th>
+                    <th>UserName</th>
+                    <th>Education</th>
+                    <th>Location</th>
+                </tr>
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+        else
+        {
+            <b>No Details Found.</b>
+        }
+    }
+</body>
+</html>*@
